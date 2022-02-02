@@ -1,0 +1,78 @@
+.products {
+  width: 35%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+  overflow-y: auto;
+}
+
+h1,
+p {
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.products-list {
+  margin: 2rem 2.5rem;
+  padding-bottom: 10rem;
+  /* height: 120vh; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.products-list img {
+  width: 170px;
+  height: auto;
+}
+
+.object {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 14rem;
+  cursor: pointer;
+}
+
+.box {
+  border-radius: 1.5rem;
+  height: 8rem;
+  width: 10rem;
+  margin-top: -6rem;
+  z-index: -1;
+}
+
+.box p {
+  padding-top: 4rem;
+  padding-right: 0;
+  padding-left: 0;
+  z-index: 1;
+}
+
+.scroll-down-icon {
+  width: 2.2rem;
+  position: absolute;
+  bottom: -10rem;
+  left: 14.7rem;
+  animation: opacityOn 5s normal ease-in-out infinite;
+}
+
+@keyframes opacityOn {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
