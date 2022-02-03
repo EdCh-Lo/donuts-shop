@@ -2,4 +2,9 @@
   border-left: solid 0.2em white;
   width: 65%;
   height: 100vh;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.product img {
+  width: 50%;
 }

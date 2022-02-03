@@ -1,7 +1,7 @@
 .products {
   width: 35%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   padding-top: 2rem;
   overflow-y: auto;
 }
@@ -20,11 +20,13 @@ p {
   flex-wrap: wrap;
   justify-content: space-evenly;
   position: relative;
+  z-index: 30;
 }
 
-.products-list img {
+.object img {
   width: 170px;
   height: auto;
+  cursor: pointer;
 }
 
 .object {
@@ -33,7 +35,6 @@ p {
   justify-content: center;
   align-items: center;
   height: 14rem;
-  cursor: pointer;
 }
 
 .box {
@@ -42,6 +43,7 @@ p {
   width: 10rem;
   margin-top: -6rem;
   z-index: -1;
+  cursor: pointer;
 }
 
 .box p {
@@ -74,5 +76,31 @@ p {
   }
   100% {
     opacity: 1;
+  }
+}
+
+#selected {
+  border: 3px solid white;
+}
+
+#selectedImg {
+  animation: move 5s normal ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-8px);
+  }
+  25% {
+    transform: translateY(+8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  75% {
+    transform: translateY(+8px);
+  }
+  100% {
+    transform: translateY(-8px);
   }
 }
