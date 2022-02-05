@@ -6,14 +6,14 @@ body {
   font-family: ubuntu;
 }
 
-/* @keyframes spinAround {
+@keyframes spinAround {
   from {
     transform: rotate(0deg) translate(300px);
   }
   to {
     transform: rotate(360deg) translate(300px);
   }
-} */
+}
 
 .circle {
   width: 1000px;
@@ -26,39 +26,37 @@ body {
 
 .circle-1 {
   background-color: #ffb47e;
-  filter: blur(200px);
-  left: -300px;
-  top: -300px;
+  filter: blur(150px);
+  left: -500px;
+  top: -200px;
 }
 
 .circle-2 {
   left: 300px;
-  top: -300px;
+  top: -500px;
 
-  background: #c172ff;
-  filter: blur(200px);
+  background: #852aca;
+  filter: blur(150px);
 }
 
 .circle-3 {
   left: 659px;
-  top: -373px;
+  top: -173px;
 
   background: #f199ff;
-  filter: blur(200px);
+  filter: blur(150px);
 }
 
 .circle-4 {
   left: 542px;
   top: 219px;
-
   background: #94b3ff;
-  filter: blur(300px);
+  filter: blur(150px);
 }
 
 .circle-5 {
   left: -59px;
   top: 315px;
-
   background: #ff92d3;
-  filter: blur(300px);
+  filter: blur(150px);
 }

@@ -2,21 +2,30 @@ import React, { useEffect, useState } from "react";
 import "./Products.css";
 import donuts from "../data";
 import scrollDown from "../img/icon-scroll.png";
+import { NavLink } from "react-router-dom";
 
-const Products = ({ products, onChange }) => {
-  const [selectDonut, setSelectDonut] = useState(1);
+const Products = ({ products, Donut }) => {
+  const [selectDonut, setSelectDonut] = useState(Donut);
 
-  //send state to main
-  useEffect(() => {
-    onChange(selectDonut);
-  }, [selectDonut, onChange]);
+  const handleClick = (e) => {
+    setSelectDonut(Donut);
+  };
+
+  // //send state to main
+  // useEffect(() => {
+  //   onChange(selectDonut);
+  // }, [selectDonut, onChange]);
 
   // donuts.map((donut) => console.log(donut.name));
 
-  const handleClick = (e) => {
-    let selectedDonut = +e.target.parentNode.id;
-    setSelectDonut(selectedDonut);
-  };
+  // const handleClick = (e) => {
+  //   if (e.target.parentNode.id) {
+  //     let selectedDonut = +e.target.parentNode.id;
+  //     setSelectDonut(selectedDonut);
+  //   } else {
+  //     setSelectDonut(0);
+  //   }
+  // };
 
   return (
     <section className="products">
@@ -25,28 +34,30 @@ const Products = ({ products, onChange }) => {
 
       <div className="products-list">
         {donuts.map((donut) => (
-          <div
-            className="object"
-            key={donut.id}
-            onClick={handleClick}
-            id={donut.id}
-          >
-            <img
-              key={donut.id}
-              src={donut.img}
-              alt=""
-              id={selectDonut === +donut.id ? "selectedImg" : ""}
-            />
+          <NavLink to={donut.id < 0 ? `/error` : `/${donut.id}`} key={donut.id}>
             <div
-              id={selectDonut === +donut.id ? "selected" : ""}
-              className="box"
-              style={{
-                backgroundColor: donut.color,
-              }}
+              className="object"
+              key={donut.id}
+              onClick={handleClick}
+              id={donut.id}
             >
-              <p>{donut.name}</p>
+              <img
+                key={donut.id}
+                src={donut.img}
+                alt=""
+                id={Donut === +donut.id ? "selectedImg" : ""}
+              />
+              <div
+                id={Donut === +donut.id ? "selected" : ""}
+                className="box"
+                style={{
+                  backgroundColor: donut.color,
+                }}
+              >
+                <p>{donut.name}</p>
+              </div>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
       <img

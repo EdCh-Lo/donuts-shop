@@ -1,30 +1,41 @@
-import React from "react";
+import { useEffect } from "react";
 import "./Product.css";
 import donuts from "../data";
+import { useParams, Navigate } from "react-router-dom";
 
-const Product = ({ selectedProduct }) => {
-  console.log(selectedProduct);
+const Product = ({ onChange }) => {
+  const { askedDonut } = useParams();
+  let selectedDonut = +askedDonut;
+
+  useEffect(() => {
+    onChange(selectedDonut);
+  }, [selectedDonut, onChange]);
 
   let currentProduct = donuts
-    .filter((donut) => donut.id === selectedProduct)
+    .filter((donut) => donut.id === selectedDonut)
     .pop();
   console.log(currentProduct);
 
   return (
     <section className="product">
-      {currentProduct ? (
+      {currentProduct === undefined ? (
+        <Navigate to="/error" replace={true} />
+      ) : (
         <>
           <div className="left-side">
-            <img src={currentProduct.img} alt="" />
+            <img src={currentProduct.imgPlain} alt="" />
             <p>Available for pick up or delivery</p>
           </div>
 
           <div className="right-side">
-            <h1>{currentProduct.name}</h1>
+            <div className="intro">
+              <h1>{currentProduct.name}</h1>
+              <p>{currentProduct.description}</p>
+            </div>
+            <div className="buy">Add to cart</div>
+            <div className="pricing"></div>
           </div>
         </>
-      ) : (
-        <p>Please select a donut</p>
       )}
     </section>
   );
