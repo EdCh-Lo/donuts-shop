@@ -1,12 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Product.css";
 import donuts from "../data";
 import { useParams, Navigate } from "react-router-dom";
+import Input from "./Input";
+import Pricing from "./Pricing";
 
 const Product = ({ onChange }) => {
+  const [numberChoosen, setNumberChoosen] = useState(1);
+
+  //using params for querying donut
   const { askedDonut } = useParams();
   let selectedDonut = +askedDonut;
 
+  //get the selected donut from the products list to know currentProduct to display
   useEffect(() => {
     onChange(selectedDonut);
   }, [selectedDonut, onChange]);
@@ -15,6 +21,12 @@ const Product = ({ onChange }) => {
     .filter((donut) => donut.id === selectedDonut)
     .pop();
   console.log(currentProduct);
+
+  //get current numbers of products in input field
+  const getCurrNumber = (currNumber) => {
+    console.log(currNumber);
+    return setNumberChoosen(currNumber);
+  };
 
   return (
     <section className="product">
@@ -32,8 +44,19 @@ const Product = ({ onChange }) => {
               <h1>{currentProduct.name}</h1>
               <p>{currentProduct.description}</p>
             </div>
-            <div className="buy">Add to cart</div>
-            <div className="pricing"></div>
+
+            <Input key={currentProduct.id} getCurrNumber={getCurrNumber} />
+
+            <div className="cart">
+              <div onChange={getCurrNumber}>
+                {`${
+                  Math.round(currentProduct.price * numberChoosen * 100) / 100
+                }$`}
+              </div>
+              <button>Add to cart</button>
+            </div>
+
+            <Pricing />
           </div>
         </>
       )}

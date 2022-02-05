@@ -4,7 +4,7 @@ import donuts from "../data";
 import scrollDown from "../img/icon-scroll.png";
 import { NavLink } from "react-router-dom";
 
-const Products = ({ products, Donut }) => {
+const Products = ({ Donut }) => {
   const [selectDonut, setSelectDonut] = useState(Donut);
 
   const handleClick = (e) => {

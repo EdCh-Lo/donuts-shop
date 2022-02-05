@@ -7,18 +7,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 const Main = () => {
-  const [selectedDonut, setSelectedDonut] = useState(1);
+  const [selectedDonut, setSelectedDonut] = useState(0);
 
   useEffect(() => {
     console.log(selectedDonut);
   }, [selectedDonut]);
 
   return (
-    <Router>
+    <Router onChange={setSelectedDonut}>
       <main>
         <Products Donut={selectedDonut} />
 
-        <Routes onChange={setSelectedDonut}>
+        <Routes>
           {selectedDonut === NaN ? (
             <Navigate replace to="/error" />
           ) : (
@@ -28,6 +28,7 @@ const Main = () => {
             />
           )}
 
+          <Route path="/" element={<Navigate replace to="/error" />} />
           <Route path="/error" element={<Error />} />
         </Routes>
       </main>

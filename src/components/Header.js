@@ -7,7 +7,7 @@ const Header = () => {
       <img
         className="logo"
         src="https://assets.webiconspng.com/uploads/2017/09/Donut-PNG-Image-77162.png"
-        alt=""
+        alt="donut-logo"
       />
       <ul>
         <li>Our donuts</li>

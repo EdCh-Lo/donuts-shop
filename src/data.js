@@ -15,6 +15,7 @@ const donuts = [
   {
     id: 1,
     name: "The Basics",
+    price: 3.99,
     description: "Original donut (plain) glazed",
     img: basics,
     imgPlain: basicsPlain,
@@ -23,6 +24,7 @@ const donuts = [
   {
     id: 2,
     name: "Salted Caramel",
+    price: 4.99,
     description:
       "Made with our signature caramel sauce & lightly dusted with fleur de sel",
     img: saltedCaramel,
@@ -32,6 +34,7 @@ const donuts = [
   {
     id: 3,
     name: "Sugar Mama",
+    price: 3.99,
     description: "Rolled in cinnamon sugar",
     img: sugarMama,
     imgPlain: sugarMamaPlain,
@@ -40,6 +43,7 @@ const donuts = [
   {
     id: 4,
     name: "Chocolate",
+    price: 5.99,
     description: "Dark chocolate glaze dusted with 100% pure cocoa powder",
     img: chocolate,
     imgPlain: chocolatePlain,
@@ -48,6 +52,7 @@ const donuts = [
   {
     id: 5,
     name: "Speculoos",
+    price: 5.99,
     description:
       "Spiced cookie butter glaze topped with a thick layer of speculoos biscuit crumbs",
     img: speculoos,
@@ -57,6 +62,7 @@ const donuts = [
   {
     id: 6,
     name: "Peanut Butter",
+    price: 4.99,
     description: "Peanut butter glazed and dark chocolate drizzle",
     img: peanutButter,
     imgPlain: peanutButterPlain,
