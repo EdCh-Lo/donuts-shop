@@ -1,4 +1,21 @@
 .pricing {
   display: flex;
-  padding-right: 10rem;
+  margin-left: -4rem;
+  margin-right: 4rem;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+
+.donut-package {
+  width: 8rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-discount p {
+  padding: 0;
 }

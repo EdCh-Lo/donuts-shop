@@ -1,34 +1,37 @@
 import React from "react";
 import "./Pricing.css";
+import discount2 from "../img/discount-2.png";
+import discount3 from "../img/discount-3.png";
+import discount4 from "../img/discount-4.png";
 
 const Pricing = () => {
   return (
     <div className="pricing">
-      <div className="box-1">
+      <div className="box-discount">
         <div className="donut-package">
-          <img src="" alt="" />
-          <p>
-            <span>X2</span> 15% discount
-          </p>
+          <img src={discount2} alt="" />
         </div>
+        <p>
+          <span>X2</span> 15% discount
+        </p>
       </div>
 
-      <div className="box-2">
+      <div className="box-discount">
         <div className="donut-package">
-          <img src="" alt="" />
-          <p>
-            <span>X3</span> 20% discount
-          </p>
+          <img src={discount3} alt="" />
         </div>
+        <p>
+          <span>X3</span> 20% discount
+        </p>
       </div>
 
-      <div className="box-3">
+      <div className="box-discount">
         <div className="donut-package">
-          <img src="" alt="" />
-          <p>
-            <span>X4</span> 30% discount
-          </p>
+          <img src={discount4} alt="" />
         </div>
+        <p>
+          <span>X4</span> 30% discount
+        </p>
       </div>
     </div>
   );
