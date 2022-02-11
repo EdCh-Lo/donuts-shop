@@ -3,7 +3,7 @@ import "./Product.css";
 import donuts from "../data";
 import { useParams, Navigate } from "react-router-dom";
 import Input from "./Input";
-import Pricing from "./Pricing";
+import Shops from "./Shops";
 
 const Product = ({ onChange }) => {
   const [numberChoosen, setNumberChoosen] = useState(1);
@@ -56,7 +56,7 @@ const Product = ({ onChange }) => {
               <button>Add to cart</button>
             </div>
 
-            <Pricing />
+            <Shops />
           </div>
         </>
       )}

@@ -1,0 +1,49 @@
+.shops {
+  display: flex;
+  margin-left: -4rem;
+  margin-right: 4rem;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+
+.box-shop {
+  background-color: #94b2ff69;
+  width: 12rem;
+  height: 6rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box-shop p {
+  padding: 0;
+}
+
+.box-shop h4 {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.box-shop img {
+  width: 20%;
+}
+
+.address {
+  position: relative;
+}
+
+.address p {
+  padding-left: 1rem;
+}
+
+.address p::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: green;
+  position: absolute;
+  bottom: 1.3rem;
+  left: 0.4rem;
+}

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 const Main = () => {
-  const [selectedDonut, setSelectedDonut] = useState(0);
+  const [selectedDonut, setSelectedDonut] = useState(1);
 
   useEffect(() => {
     console.log(selectedDonut);
@@ -28,7 +28,10 @@ const Main = () => {
             />
           )}
 
-          <Route path="/" element={<Navigate replace to="/error" />} />
+          <Route
+            path="/"
+            element={<Navigate replace to={`/${selectedDonut}`} />}
+          />
           <Route path="/error" element={<Error />} />
         </Routes>
       </main>

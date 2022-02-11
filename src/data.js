@@ -16,7 +16,8 @@ const donuts = [
     id: 1,
     name: "The Basics",
     price: 3.99,
-    description: "Original donut (plain) glazed",
+    description:
+      "Original US donut (plain) glazed, filled with love, nothing more, nothing less.",
     img: basics,
     imgPlain: basicsPlain,
     color: "rgba(247, 144, 213, 0.4)",
@@ -35,7 +36,8 @@ const donuts = [
     id: 3,
     name: "Sugar Mama",
     price: 3.99,
-    description: "Rolled in cinnamon sugar",
+    description:
+      "The basic US donut, rolled in cinnamon sugar, call it Mama & avoid hypoglycemia",
     img: sugarMama,
     imgPlain: sugarMamaPlain,
     color: "rgba(255, 152, 197, 0.4)",
