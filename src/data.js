@@ -21,6 +21,8 @@ const donuts = [
     img: basics,
     imgPlain: basicsPlain,
     color: "rgba(247, 144, 213, 0.4)",
+    shop1: 1,
+    shop2: 0,
   },
   {
     id: 2,
@@ -31,6 +33,8 @@ const donuts = [
     img: saltedCaramel,
     imgPlain: saltedCaramelPlain,
     color: "rgba(213, 150, 238, 0.4)",
+    shop1: 1,
+    shop2: 1,
   },
   {
     id: 3,
@@ -41,6 +45,8 @@ const donuts = [
     img: sugarMama,
     imgPlain: sugarMamaPlain,
     color: "rgba(255, 152, 197, 0.4)",
+    shop1: 1,
+    shop2: 1,
   },
   {
     id: 4,
@@ -50,6 +56,8 @@ const donuts = [
     img: chocolate,
     imgPlain: chocolatePlain,
     color: "rgba(247, 144, 213, 0.4)",
+    shop1: 0,
+    shop2: 1,
   },
   {
     id: 5,
@@ -60,6 +68,8 @@ const donuts = [
     img: speculoos,
     imgPlain: speculoosPlain,
     color: "rgba(255, 146, 211, 0.4)",
+    shop1: 0,
+    shop2: 0,
   },
   {
     id: 6,
@@ -69,6 +79,8 @@ const donuts = [
     img: peanutButter,
     imgPlain: peanutButterPlain,
     color: "rgba(255, 152, 197, 0.4)",
+    shop1: 1,
+    shop2: 0,
   },
 ];
 

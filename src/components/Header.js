@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./Header.css";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+
   return (
     <header>
       <img
@@ -13,7 +17,7 @@ const Header = () => {
         <li>Our donuts</li>
         <li>Our stores</li>
         <li>Our story</li>
-        <li>Your cart : $0.00</li>
+        <li>Your cart : {cart}$</li>
       </ul>
     </header>
   );

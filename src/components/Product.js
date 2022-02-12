@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "../store/cart";
+
 import "./Product.css";
 import donuts from "../data";
 import { useParams, Navigate } from "react-router-dom";
@@ -6,6 +9,10 @@ import Input from "./Input";
 import Shops from "./Shops";
 
 const Product = ({ onChange }) => {
+  //redux toolkit actions
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+
   const [numberChoosen, setNumberChoosen] = useState(1);
 
   //using params for querying donut
@@ -25,7 +32,19 @@ const Product = ({ onChange }) => {
   //get current numbers of products in input field
   const getCurrNumber = (currNumber) => {
     console.log(currNumber);
+
     return setNumberChoosen(currNumber);
+  };
+
+  const calcPrice = currentProduct
+    ? Math.round(currentProduct.price * numberChoosen * 100) / 100
+    : "";
+
+  const addToCartHandler = (e) => {
+    e.preventDefault();
+
+    console.log(cart);
+    dispatch(cartActions.increase(calcPrice));
   };
 
   return (
@@ -45,18 +64,18 @@ const Product = ({ onChange }) => {
               <p>{currentProduct.description}</p>
             </div>
 
-            <Input key={currentProduct.id} getCurrNumber={getCurrNumber} />
+            <form onSubmit={addToCartHandler}>
+              <Input key={currentProduct.id} getCurrNumber={getCurrNumber} />
 
-            <div className="cart">
-              <div onChange={getCurrNumber}>
-                {`${
-                  Math.round(currentProduct.price * numberChoosen * 100) / 100
-                }$`}
+              <div className="cart">
+                <div onChange={getCurrNumber} style={{ width: "5rem" }}>
+                  {`${calcPrice}$`}
+                </div>
+                <button type="submit">Add to cart</button>
               </div>
-              <button>Add to cart</button>
-            </div>
+            </form>
 
-            <Shops />
+            <Shops shop1={currentProduct.shop1} shop2={currentProduct.shop2} />
           </div>
         </>
       )}

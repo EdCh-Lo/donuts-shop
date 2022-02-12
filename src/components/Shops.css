@@ -31,6 +31,7 @@
 
 .address {
   position: relative;
+  width: 50%;
 }
 
 .address p {
@@ -42,8 +43,23 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 1rem;
-  background-color: green;
   position: absolute;
   bottom: 1.3rem;
   left: 0.4rem;
+}
+
+.available p {
+  color: rgb(22, 173, 22);
+}
+
+.available p::before {
+  background-color: rgb(22, 173, 22);
+}
+
+.unavailable p {
+  color: rgb(173, 27, 22);
+}
+
+.unavailable p::before {
+  background-color: rgb(173, 27, 22);
 }

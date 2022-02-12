@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css";
-import Product from "./components/Product";
-import Products from "./components/Products";
-import Error from "./components/Error";
+import Product from "./Product";
+import Products from "./Products";
+import Error from "./Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 

@@ -30,6 +30,11 @@
   flex-direction: column;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .intro {
   padding-top: 3rem;
 }
