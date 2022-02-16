@@ -21,7 +21,7 @@ body {
   border-radius: 100rem;
   position: absolute;
   z-index: -10;
-  /* animation: spinAround 8s linear infinite; */
+  animation: spinAround 8s linear infinite;
 }
 
 .circle-1 {
