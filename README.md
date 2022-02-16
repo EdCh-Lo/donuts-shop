@@ -4,6 +4,8 @@
 
 This website allows you to choose different donuts with the interactive product list, and add selected donuts to your cart. It was made with ReactJS, with Router for every product page (and redirections), and Redux to handle the cart.
 
+[Live demo](https://donuts-factory.netlify.app/)
+
 ## How to run it
 
 Install node modules :
